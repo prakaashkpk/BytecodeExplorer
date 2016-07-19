@@ -1,3 +1,5 @@
+This project is fork of vgrazi BytecodeExplorer - https://github.com/vgrazi/BytecodeExplorer
+
 # BytecodeExplorer
 ## Current state
 This application consist of two interfaces; Java and AngularJS, that allow the user to upload a .class file (does not go to the server), and opens the file in a 
@@ -15,6 +17,17 @@ monitor the stack and program registers.
 ## Usage
 To launch the Java version build it using Maven, then run java com.vgrazi.bytecodeexplorer.BytecodeExplorer target/classes/com/vgrazi/SampleClass.class
 (Other classes may or may not work at this time). There is a sample.sh and sample.bat shell script you can use to build and launch that.
+
+## Steps to run the tool(Mac OS). 
+1. Install brew if not installed already. Follow instructions on http://brew.sh
+   `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. Install maven \
+	`brew install maven`
+3. Once maven is installed. Run `mvn install` 
+4. Run the application\
+	`java -cp target/bytecode-explorer-1.0.0-SNAPSHOT.jar com.vgrazi.bytecodeexplorer.BytecodeExplorer <Sample_class_file>`\
+	For example:\
+		`java -cp target/bytecode-explorer-1.0.0-SNAPSHOT.jar com.vgrazi.bytecodeexplorer.BytecodeExplorer ./target/classes/com/vgrazi/sample/SampleClass.class`
 
 ## Screenshot
 ![alt text](bytecode-explorer.png "BytecodeExplorer")
